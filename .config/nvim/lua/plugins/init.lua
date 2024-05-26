@@ -26,6 +26,16 @@ return {
         end,
         desc = "Find node_module",
       },
+      {
+        "<leader>fb",
+        function()
+          require("telescope.builtin").find_files({
+            no_ignore = true,
+            search_dirs = { "build", "jira/build" },
+          })
+        end,
+        desc = "Find build files",
+      },
       -- add a keymap to browse plugin files
       -- {
       --   "<leader>fp",
