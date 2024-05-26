@@ -40,5 +40,5 @@
 #   echo "$output_styles"
 # }
 
-PROMPT='%B%F{green}%~%f%b '
+PROMPT='%B%F{green}%~%f%b %0(?..%F{magenta} [%?])%f%b'
 
