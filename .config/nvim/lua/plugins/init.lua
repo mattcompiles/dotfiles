@@ -155,4 +155,8 @@ return {
     end,
   },
   "tpope/vim-surround",
+  {
+    "folke/flash.nvim",
+    enabled = false,
+  },
 }
