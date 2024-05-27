@@ -1,0 +1,33 @@
+git_set_user() {
+    current_dir=$(dirname `pwd`)
+
+    if [[ "$current_dir" == *"github" ]]
+    then
+        echo "Committing using Github user..."
+        git config user.name "mattcompiles"
+        git config user.email "mattjones701@gmail.com"
+    else
+        echo "Committing using Bitbucket user..."
+        git config user.name "Matt Jones"
+        git config user.email "mjones4@atlassian.com"
+    fi
+}
+
+alias g="git" 
+alias gsetuser=git_set_user
+alias gcm="gsetuser; git commit -m"
+alias gp="git push -u origin HEAD" 
+alias gco="git checkout"
+alias gbc="git checkout -b"
+alias gm="git merge"
+alias gpl='git pull origin $(git rev-parse --abbrev-ref HEAD)'
+alias gsu='git status -uno'
+alias gs='git status'
+
+alias parcel-link="$HOME/github/parcel/packages/dev/parcel-link/bin.js"
+alias parcel-query="$HOME/github/parcel/packages/dev/query/src/bin.js"
+alias e="eza -al --no-user --no-permissions --group-directories-first"
+alias lg="lazygit"
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dlg='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
