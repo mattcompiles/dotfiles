@@ -12,6 +12,11 @@ return {
   "jeffkreeftmeijer/vim-numbertoggle",
   {
     "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        path_display = { "smart" },
+      },
+    },
     keys = {
       -- disable the keymap to grep files
       -- { "<leader>/", false },
