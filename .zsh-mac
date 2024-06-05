@@ -1,0 +1,12 @@
+# fnm
+export PATH="${HOME}/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+
+# pnpm
+export PNPM_HOME="${HOME}/Library/pnpm"
+export PATH="$PATH:$PNPM_HOME"
+# pnpm end
+
+export PATH="$PATH:$HOME/.local/procmon"
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
