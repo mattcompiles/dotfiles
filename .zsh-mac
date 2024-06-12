@@ -1,3 +1,5 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # fnm
 export PATH="${HOME}/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
