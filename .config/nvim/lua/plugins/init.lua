@@ -95,6 +95,36 @@ return {
         "<cmd>SidewaysRight<CR>",
         desc = "Sideways right",
       },
+      {
+        "<leader>Si",
+        "<Plug>SidewaysArgumentInsertBefore",
+        desc = "Sideways insert argument before",
+      },
+      {
+        "<leader>Sa",
+        "<Plug>SidewaysArgumentAppendAfter",
+        desc = "Sideways append argument after",
+      },
+      {
+        "<leader>SI",
+        "<Plug>SidewaysArgumentInsertFirst",
+        desc = "Sideways insert argument first",
+      },
+      {
+        "<leader>SA",
+        "<Plug>SidewaysArgumentAppendLast",
+        desc = "Sideways append argument last",
+      },
+      {
+        "aa",
+        "<Plug>SidewaysArgumentTextobjA",
+        mode = { "o", "x" },
+      },
+      {
+        "ia",
+        "<Plug>SidewaysArgumentTextobjI",
+        mode = { "o", "x" },
+      },
     },
   },
   {
@@ -107,5 +137,21 @@ return {
   {
     "folke/flash.nvim",
     enabled = false,
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+    keys = {
+      {
+        "<C-h>",
+        "<cmd>TmuxNavigateLeft<CR>",
+        desc = "Tmux navigate left",
+      },
+      {
+        "<C-l>",
+        "<cmd>TmuxNavigateRight<CR>",
+        desc = "Tmux navigate right",
+      },
+    },
   },
 }
