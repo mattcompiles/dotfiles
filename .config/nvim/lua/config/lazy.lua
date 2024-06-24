@@ -53,3 +53,6 @@ require("lazy").setup({
 
 ---@diagnostic disable-next-line: missing-fields
 require("lspconfig").flow.setup({})
+
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#C9D1DA" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#C9D1DA" })
