@@ -1,0 +1,49 @@
+[core]
+  pager = delta
+
+[diff]
+  colorMoved = default
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+
+[trace2]
+  eventTarget = af_unix:~/.gittrace/trace.sock
+  eventBrief = true
+  eventNesting = 1
+  configparams = custom.metacommands
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+
+[delta]
+  dark = true
+  navigate = true
+  line-numbers = true
+  syntax-theme = OneHalfDark
+  hyperlinks = true
+  diff-so-fancy = true
+  wrap-max-lines = 0
+
+[init]
+	defaultBranch = main
+
+[user]
+	name = mattcompiles
+	email = mattjones701@gmail.com
+
+[core]
+	editor = nvim
+	packedGitLimit = 4095m 
+	packedGitWindowSize = 4095m
+	compression = 0
+
+[pack]
+	packSizeLimit = 4095m 
+	windowMemory = 8096m
