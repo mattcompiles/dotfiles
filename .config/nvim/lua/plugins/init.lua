@@ -18,6 +18,14 @@ return {
         "<cmd>Neotree %:p:h<CR>",
         desc = "Open file explorer (current dir)",
       },
+      {
+        "<leader>fe",
+        false,
+      },
+      {
+        "<leader>fE",
+        false,
+      },
     },
     opts = {
       close_if_last_window = true,
