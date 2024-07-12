@@ -5,5 +5,3 @@ vim.keymap.set("n", "<leader>cv", ":lua=")
 
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
-vim.keymap.del("n", "<leader>fe")
-vim.keymap.del("n", "<leader>fE")
