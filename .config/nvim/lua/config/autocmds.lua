@@ -3,14 +3,18 @@
 -- Add any additional autocmds here
 local function is_flowtype()
   ---@diagnostic disable-next-line: undefined-field
-  return vim.fn.getline(1):match("//%s*@flow")
+  return vim.fn.getline(1):match("//%s*@flow") ~= nil
 end
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("disable_tsserver_when_flow", { clear = true }),
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client.name == "vtsls" and is_flowtype() then
+    if client.name == "typescript-tools" and is_flowtype() then
+      vim.lsp.stop_client(args.data.client_id, true)
+    end
+    -- Using typescript-tools instead
+    if client.name == "tsserver" then
       vim.lsp.stop_client(args.data.client_id, true)
     end
   end,

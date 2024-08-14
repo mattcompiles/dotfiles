@@ -33,3 +33,6 @@ vim.g.rustaceanvim = {
     },
   },
 }
+
+-- 🤷 cos Ben said
+vim.g.polyglot_disabled = { "ftdetect" }
