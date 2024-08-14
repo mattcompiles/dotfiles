@@ -1,3 +1,5 @@
+local root_selectors = require("config.root_selectors")
+
 return {
   {
     "ibhagwan/fzf-lua",
@@ -6,14 +8,14 @@ return {
       {
         "<leader>ff",
         function()
-          LazyVim.pick("files", { cwd = vim.g.package_root() })()
+          LazyVim.pick("files", { cwd = root_selectors.package() })()
         end,
         desc = "Find files - Package",
       },
       {
         "<leader>fF",
         function()
-          LazyVim.pick("files", { cwd = vim.g.workspace_root() })()
+          LazyVim.pick("files", { cwd = root_selectors.workspace() })()
         end,
         desc = "Find files - Workspace root",
       },
@@ -22,14 +24,14 @@ return {
       {
         "<leader>fn",
         function()
-          LazyVim.pick("files", { cwd = vim.fs.joinpath(vim.g.workspace_root(), "node_modules") })()
+          LazyVim.pick("files", { cwd = vim.fs.joinpath(root_selectors.workspace(), "node_modules") })()
         end,
         desc = "Find node_modules",
       },
       {
         "<leader>fb",
         function()
-          LazyVim.pick("files", { cwd = vim.fs.joinpath(vim.g.workspace_root(), "build") })()
+          LazyVim.pick("files", { cwd = vim.fs.joinpath(root_selectors.workspace(), "build") })()
         end,
         desc = "Find files - Build",
       },
@@ -72,7 +74,7 @@ return {
       {
         "<leader>sG",
         function()
-          LazyVim.pick("live_grep", { cwd = vim.g.package_root() })()
+          LazyVim.pick("live_grep", { cwd = root_selectors.package() })()
         end,
         desc = "Grep - Package",
       },
