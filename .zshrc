@@ -36,6 +36,7 @@ source "${HOME}/.afm-git-configrc"
 
 eval "$(zoxide init zsh --cmd cd)"
 eval "$(fzf --zsh)"
+eval "$(fnm env --use-on-cd)"
 
 if [[ $(uname) == "Darwin" ]]; then
   source "${HOME}/.zsh-mac"
