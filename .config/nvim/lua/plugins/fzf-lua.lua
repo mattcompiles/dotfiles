@@ -3,6 +3,24 @@ local root_selectors = require("config.root_selectors")
 return {
   {
     "ibhagwan/fzf-lua",
+    opts = {
+      winopts = {
+        height = 0.99,
+        width = 0.99,
+        preview = {
+          horizontal = "right:50%",
+        },
+      },
+      files = {
+        git_icons = false,
+        previewer = "bat",
+      },
+      previewers = {
+        bat = {
+          args = "--color=always --style=numbers,changes,header-filemodified,header-filename,grid",
+        },
+      },
+    },
     keys = {
       { "<leader><space>", LazyVim.pick("files"), desc = "Find files - Git" },
       {
