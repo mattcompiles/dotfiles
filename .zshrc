@@ -15,6 +15,8 @@ autoload -U compinit && compinit
 
 zstyle ':completion:*' menu no
 
+bindkey -v
+
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
@@ -41,3 +43,5 @@ eval "$(fnm env --use-on-cd)"
 if [[ $(uname) == "Darwin" ]]; then
   source "${HOME}/.zsh-mac"
 fi
+
+export PATH="/Users/mjones4/.local/bin:$PATH"
