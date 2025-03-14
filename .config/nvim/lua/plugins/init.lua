@@ -2,6 +2,7 @@ return {
   {
     "folke/tokyonight.nvim",
     opts = {
+      style = "moon",
       transparent = true,
       styles = {
         sidebars = "transparent",
@@ -14,17 +15,9 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     keys = {
       {
-        "<leader>E",
+        "<leader>e",
         "<cmd>Neotree %:p:h<CR>",
         desc = "Open file explorer (current dir)",
-      },
-      {
-        "<leader>fe",
-        false,
-      },
-      {
-        "<leader>fE",
-        false,
       },
     },
     opts = {
@@ -174,6 +167,15 @@ return {
       settings = {
         tsserver_max_memory = 18432,
       },
+    },
+  },
+  {
+    "kr40/nvim-macros",
+    cmd = { "MacroSave", "MacroYank", "MacroSelect", "MacroDelete" },
+    opts = {
+      json_file_path = vim.fs.normalize(vim.fn.stdpath("config") .. "/macros.json"), -- Location where the macros will be stored
+      default_macro_register = "q", -- Use as default register for :MacroYank and :MacroSave and :MacroSelect Raw functions
+      json_formatter = "none", -- can be "none" | "jq" | "yq" used to pretty print the json file (jq or yq must be installed!)
     },
   },
 }
