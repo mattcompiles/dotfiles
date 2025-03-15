@@ -1,0 +1,15 @@
+{
+  "macros": [
+    {
+      "name": "console.log return value",
+      "raw": "XmRhd2lsZXQgX3RtcCAkgGtiPSAbbHl0O4D9NW9jb25zb2xlLmxvZygnG3BmKYD9NWksIF90bXAbb3JldHVybiBfdG1wOxs=",
+      "content": "^dawilet<Space>_tmp<Space>$<BS>=<Space><Esc>lyt;<Ignore>oconsole.log('<Esc>pf)<Ignore>i,<Space>_tmp<Esc>oreturn<Space>_tmp;<Esc>"
+    },
+    {
+      "name": "console.log last yank",
+      "raw": "T2NvbnNvbGUubG9nKGAbcGYpgP01aSwgG3A=",
+      "content": "Oconsole.log(`<Esc>pf)<Ignore>i,<Space><Esc>p"
+    }
+  ]
+}
+
