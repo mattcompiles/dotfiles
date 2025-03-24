@@ -13,24 +13,25 @@ return {
   "jeffkreeftmeijer/vim-numbertoggle",
   {
     "nvim-neo-tree/neo-tree.nvim",
-    keys = {
-      {
-        "<leader>e",
-        "<cmd>Neotree %:p:h<CR>",
-        desc = "Open file explorer (current dir)",
-      },
-    },
-    opts = {
-      close_if_last_window = true,
-      event_handlers = {
-        {
-          event = "file_opened",
-          handler = function()
-            require("neo-tree.command").execute({ action = "close" })
-          end,
-        },
-      },
-    },
+    enabled = false,
+    -- keys = {
+    --   {
+    --     "<leader>e",
+    --     "<cmd>Neotree %:p:h<CR>",
+    --     desc = "Open file explorer (current dir)",
+    --   },
+    -- },
+    -- opts = {
+    --   close_if_last_window = true,
+    --   event_handlers = {
+    --     {
+    --       event = "file_opened",
+    --       handler = function()
+    --         require("neo-tree.command").execute({ action = "close" })
+    --       end,
+    --     },
+    --   },
+    -- },
   },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
