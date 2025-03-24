@@ -25,3 +25,23 @@ mod1:
 cycle-layout:
   mod: mod1
   key: enter
+
+swap-screen-ccw:
+  mod: mod1
+  key: "."
+
+swap-screen-cw:
+  mod: mod1
+  key: ","
+
+shrink-main:
+  mod: mod1
+  key: J
+
+expand-main:
+  mod: mod1
+  key: K
+
+swap-main:
+  mod: mod1
+  key: M
