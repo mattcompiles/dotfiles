@@ -17,7 +17,7 @@ return {
       },
       previewers = {
         bat = {
-          args = "--color=always --style=numbers,changes,header-filemodified,header-filename,grid",
+          args = "--color=always --style=numbers,changes,header-filename,grid",
         },
       },
     },
