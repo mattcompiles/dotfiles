@@ -179,4 +179,13 @@ return {
       json_formatter = "none", -- can be "none" | "jq" | "yq" used to pretty print the json file (jq or yq must be installed!)
     },
   },
+  {
+    "echasnovski/mini.files",
+    opts = {
+      mappings = {
+        -- Map mini files synchronize to Ctrl-s
+        synchronize = "<C-s>",
+      },
+    },
+  },
 }
