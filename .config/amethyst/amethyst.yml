@@ -28,20 +28,32 @@ cycle-layout:
 
 swap-screen-ccw:
   mod: mod1
-  key: "."
+  key: "J"
 
 swap-screen-cw:
   mod: mod1
-  key: ","
+  key: "K"
 
 shrink-main:
   mod: mod1
-  key: J
+  key: U
 
 expand-main:
   mod: mod1
-  key: K
+  key: I
 
 swap-main:
   mod: mod1
   key: M
+
+relaunch-amethyst:
+  mod: mod1
+  key: "?"
+
+focus-ccw:
+  mod: mod1
+  key: H
+
+focus-cw:
+  mod: mod1
+  key: L
