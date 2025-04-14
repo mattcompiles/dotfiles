@@ -4,7 +4,7 @@ layouts:
   # - tall-right
   # - wide
   - two-pane
-  # - middle-wide
+  - middle-wide
   # - 3column-left
   # - middle-wide # The legacy name of "3column-middle"
   # - 3column-right
