@@ -74,6 +74,13 @@ return {
             fn_transform = function(input)
               return string.sub(input, 1, -2)
             end,
+            preview = {
+              type = "cmd",
+              fn = function(s)
+                local package_path = string.gmatch(s[1], "(.+):(.+)")()
+                return "bat --color=always " .. package_path
+              end,
+            },
             actions = {
               ["default"] = function(selection, opts)
                 local package_path = string.gmatch(selection[1], "(.+):(.+)")()
@@ -101,7 +108,17 @@ return {
           )
 
           require("fzf-lua").fzf_exec(cmd_string, {
-            fzf_opts = { ["--delimiter"] = ":", ["--with-nth"] = 2 },
+            fzf_opts = {
+              ["--delimiter"] = ":",
+              ["--with-nth"] = 2,
+            },
+            preview = {
+              type = "cmd",
+              fn = function(s)
+                local crate_path = string.gmatch(s[1], "(.+):(.+)")()
+                return "bat --color=always " .. crate_path
+              end,
+            },
             actions = {
               ["default"] = function(selection, opts)
                 local crate_path = string.gmatch(selection[1], "(.+):(.+)")()
