@@ -24,6 +24,8 @@ alias gpl='git pull origin $(git rev-parse --abbrev-ref HEAD)'
 alias gsu='git status -uno'
 alias gs='git status'
 
+function gfb() { g fetch origin $1 && gco $1 }
+
 alias aplink="$HOME/atlassian/atlaspack/packages/dev/atlaspack-link/bin.js"
 alias apquery="$HOME/atlassian/atlaspack/packages/dev/query/src/bin.js"
 alias e="eza -al --no-user --no-permissions --group-directories-first"
