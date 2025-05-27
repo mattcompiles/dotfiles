@@ -157,6 +157,18 @@ return {
     },
   },
   {
+    "swaits/zellij-nav.nvim",
+    lazy = true,
+    event = "VeryLazy",
+    keys = {
+      { "<c-h>", "<cmd>ZellijNavigateLeftTab<cr>", { silent = true, desc = "navigate left or tab" } },
+      { "<c-j>", "<cmd>ZellijNavigateDown<cr>", { silent = true, desc = "navigate down" } },
+      { "<c-k>", "<cmd>ZellijNavigateUp<cr>", { silent = true, desc = "navigate up" } },
+      { "<c-l>", "<cmd>ZellijNavigateRightTab<cr>", { silent = true, desc = "navigate right or tab" } },
+    },
+    opts = {},
+  },
+  {
     "mrcjkb/rustaceanvim",
     version = "^4", -- Recommended
     lazy = false, -- This plugin is already lazy
@@ -187,5 +199,15 @@ return {
         synchronize = "<C-s>",
       },
     },
+  },
+  {
+    "williamboman/mason.nvim",
+    -- Pin version
+    version = "1.11.0",
+  },
+  {
+    "mason-org/mason-lspconfig.nvim",
+    -- Pin version
+    version = "1.32.0",
   },
 }
