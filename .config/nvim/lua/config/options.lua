@@ -29,6 +29,19 @@ vim.g.rustaceanvim = {
           rangeExclusiveHints = { enable = false },
           typeHints = { enable = false, hideClosureInitialization = false, hideNamedConstructor = false },
         },
+        diagnostics = {
+          enable = true,
+          disabled = {
+            "unresolved-macro-call",
+            "unresolved-proc-macro",
+            "macro-error",
+          },
+        },
+        procMacro = {
+          ignored = {
+            ["napi-derive"] = { "napi" },
+          },
+        },
       },
     },
   },
