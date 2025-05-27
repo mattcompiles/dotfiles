@@ -26,13 +26,21 @@ cycle-layout:
   mod: mod1
   key: enter
 
+swap-ccw:
+  mod: mod1
+  key: J
+
+swap-cw:
+  mod: mod1
+  key: K
+
 swap-screen-ccw:
   mod: mod1
-  key: "J"
+  key: Y
 
 swap-screen-cw:
   mod: mod1
-  key: "K"
+  key: O
 
 shrink-main:
   mod: mod1
@@ -44,11 +52,11 @@ expand-main:
 
 swap-main:
   mod: mod1
-  key: M
+  key: space
 
 relaunch-amethyst:
   mod: mod1
-  key: "?"
+  key: P
 
 focus-ccw:
   mod: mod1
@@ -57,3 +65,6 @@ focus-ccw:
 focus-cw:
   mod: mod1
   key: L
+
+mouse-follows-focus: true
+focus-follows-mouse: false
