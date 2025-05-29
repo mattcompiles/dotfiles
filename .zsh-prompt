@@ -10,7 +10,7 @@ atlaspack_version() {
   # Process the output using jq, returning if it fails
   result=$(echo "$output" | jq -r '
     if .versions.active.kind == "local" then 
-      "local" 
+      "lunk" 
     elif .versions.active.kind == "unmanaged" then
       error("unmanaged")
     else 
