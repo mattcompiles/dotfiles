@@ -45,3 +45,6 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 export PATH="/Users/mjones4/.local/bin:$PATH"
+export EDITOR="$(which nvim)"
+
+export APVM_ATLASPACK_LOCAL="$HOME/atlassian/atlaspack"
