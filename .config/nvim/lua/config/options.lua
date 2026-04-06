@@ -49,3 +49,6 @@ vim.g.rustaceanvim = {
 
 -- 🤷 cos Ben said
 vim.g.polyglot_disabled = { "ftdetect" }
+
+-- Disable concealling of quotes in JSON
+vim.opt.conceallevel = 0

@@ -11,28 +11,6 @@ return {
     },
   },
   "jeffkreeftmeijer/vim-numbertoggle",
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-    -- keys = {
-    --   {
-    --     "<leader>e",
-    --     "<cmd>Neotree %:p:h<CR>",
-    --     desc = "Open file explorer (current dir)",
-    --   },
-    -- },
-    -- opts = {
-    --   close_if_last_window = true,
-    --   event_handlers = {
-    --     {
-    --       event = "file_opened",
-    --       handler = function()
-    --         require("neo-tree.command").execute({ action = "close" })
-    --       end,
-    --     },
-    --   },
-    -- },
-  },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
@@ -157,18 +135,6 @@ return {
     },
   },
   {
-    "swaits/zellij-nav.nvim",
-    lazy = true,
-    event = "VeryLazy",
-    keys = {
-      { "<c-h>", "<cmd>ZellijNavigateLeftTab<cr>", { silent = true, desc = "navigate left or tab" } },
-      { "<c-j>", "<cmd>ZellijNavigateDown<cr>", { silent = true, desc = "navigate down" } },
-      { "<c-k>", "<cmd>ZellijNavigateUp<cr>", { silent = true, desc = "navigate up" } },
-      { "<c-l>", "<cmd>ZellijNavigateRightTab<cr>", { silent = true, desc = "navigate right or tab" } },
-    },
-    opts = {},
-  },
-  {
     "mrcjkb/rustaceanvim",
     version = "^4", -- Recommended
     lazy = false, -- This plugin is already lazy
@@ -200,33 +166,16 @@ return {
       },
     },
   },
-  "github/copilot.vim",
   {
-    "atlassian-labs/rovo-dev.nvim",
-    opts = {
-      terminal = {
-        cmd = { "acli", "rovodev", "run" },
-        side = "right",
-        width = 0.33, -- ratio of total columns when 0<width<1, else fixed cols
+    dir = vim.fn.stdpath("config") .. "/lua/test-only-toggle",
+    keys = {
+      {
+        "<leader>tf",
+        function()
+          require("test-only-toggle").toggle_only()
+        end,
+        desc = "Toggle .only on test",
       },
-      file_refresh = {
-        enable = true,
-        refresh_on_terminal_output = true,
-        refresh_debounce_ms = 200,
-      },
-      keymaps = {
-        toggle = {
-          normal = "<C-,>",
-          terminal = "<C-,>",
-        },
-        run = {
-          restore = "<leader>rR",
-          verbose = "<leader>rV",
-          shadow = "<leader>rS",
-          yolo = "<leader>rY",
-        },
-      },
-      window = { number = false, signcolumn = "no", winfixwidth = true },
     },
   },
 }
