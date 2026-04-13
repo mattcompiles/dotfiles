@@ -4,6 +4,11 @@ return {
     opts = {
       style = "moon",
       transparent = true,
+      on_colors = function(colors)
+        colors.bg = "#0e0e12"
+        colors.bg_dark = "#0a0a0e"
+        colors.bg_float = "#0a0a0e"
+      end,
       styles = {
         sidebars = "transparent",
         floats = "transparent",

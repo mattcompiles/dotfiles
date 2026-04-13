@@ -4,8 +4,7 @@ git:
   autoRefresh: false
   paging:
     colorArg: always
-    pager: delta --dark --paging=never
-    externalDiffCommand: "difft --color=always"
+    pager: delta --dark --paging=never --syntax-theme="carbonfox"
 gui:
   nerdFontsVersion: "3"
   theme:
@@ -32,7 +31,7 @@ gui:
     unstagedChangesColor:
       - "#db4b4b"
     defaultFgColor:
-      - "#c0caf5branch"
+      - "#c0caf5"
   showFileIcons: true
   showDivergenceFromBaseBranch: onlyArrow
 
